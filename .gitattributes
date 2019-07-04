@@ -1,4 +1,1 @@
-#css/* linguist-vendored
-#* linguist-vendored
-#*.java linguist-vendored=false
 src/main/resources/style/css/**/* linguist-vendored
