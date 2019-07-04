@@ -1,3 +1,1 @@
-resources/* linguist-vendored
-modena.css linguist-vendored=false
-style.css linguist-vendored=false
+css/* linguist-vendored
