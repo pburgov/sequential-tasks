@@ -1,0 +1,209 @@
+
+.root {
+    -fx-base: #d0d0d0;
+    -fx-background: #f4f4f4;
+    -fx-control-inner-background: white;
+    -fx-dark-text-color: black;
+    -fx-mid-text-color: #292929;
+    -fx-light-text-color: white;
+    -fx-accent: #0093ff;
+    -fx-focus-color: #99CCF2;
+    -fx-color: -fx-base;
+    -fx-disabled-opacity: 0.4;
+    -fx-hover-base: ladder(-fx-base, derive(-fx-base, 20%) 20%, derive(-fx-base, 30%) 35%, derive(-fx-base, 40%) 50% );
+    -fx-pressed-base: derive(-fx-base, -20%);
+    -fx-focused-base: -fx-base;
+    -fx-text-background-color: ladder(
+            -fx-background,
+            -fx-light-text-color 45%,
+            -fx-dark-text-color 46%,
+            -fx-dark-text-color 59%,
+            -fx-mid-text-color 60%
+    );
+    -fx-text-fill: -fx-text-background-color;
+    -fx-box-border: ladder(
+            -fx-color,
+            black 20%,
+            derive(-fx-color, -30%) 30%
+    );
+    -fx-text-box-border: ladder(
+            -fx-background,
+            black 10%,
+            derive(-fx-background, -15%) 30%
+    );
+    -fx-shadow-highlight-color: ladder(
+            -fx-background,
+            transparent 0%,
+            derive(-fx-background, 40%) 5%,
+            derive(-fx-background, 60%) 70%,
+            derive(-fx-background, 100%) 85%,
+            derive(-fx-background, 100%) 97%,
+            derive(-fx-background, -10%) 97.5%
+    );
+    -fx-outer-border: linear-gradient(
+            to bottom,
+            derive(-fx-color, -9%) 0%,
+            derive(-fx-color, -33%) 100%
+    );
+    -fx-inner-border: linear-gradient(
+            to bottom,
+            ladder(-fx-color,
+            derive(-fx-color, 80%) 60%,
+            white 82%) 0%,
+            ladder(-fx-color,
+            derive(-fx-color, 20%) 10%,
+            derive(-fx-color, -10%) 80%) 100%
+    );
+
+    -fx-inner-border-horizontal: linear-gradient(
+            to right,
+            ladder(-fx-color,
+            derive(-fx-color, 80%) 60%,
+            white 82%) 0%,
+            ladder(-fx-color,
+            derive(-fx-color, 20%) 10%,
+            derive(-fx-color, -10%) 80%) 100%
+    );
+
+    -fx-inner-border-bottomup: linear-gradient(
+            to top,
+            ladder(-fx-color,
+            derive(-fx-color, 80%) 60%,
+            white 82%) 0%,
+            ladder(-fx-color,
+            derive(-fx-color, 20%) 10%,
+            derive(-fx-color, -10%) 80%) 100%);
+    -fx-body-color: linear-gradient(
+            to bottom,
+            derive(-fx-color, 34%) 0%,
+            derive(-fx-color, -18%) 100%
+    );
+
+    -fx-body-color-bottomup: linear-gradient(
+            to top,
+            derive(-fx-color, 34%) 0%,
+            derive(-fx-color, -18%) 100%
+    );
+    -fx-text-base-color: ladder(
+            -fx-color,
+            -fx-light-text-color 45%,
+            -fx-dark-text-color 46%,
+            -fx-dark-text-color 59%,
+            -fx-mid-text-color 60%
+    );
+    -fx-text-inner-color: ladder(
+            -fx-control-inner-background,
+            -fx-light-text-color 45%,
+            -fx-dark-text-color 46%,
+            -fx-dark-text-color 59%,
+            -fx-mid-text-color 60%
+    );
+    -fx-mark-color: ladder(
+            -fx-color,
+            white 30%,
+            derive(-fx-color, -63%) 31%
+    );
+    -fx-mark-highlight-color: ladder(
+            -fx-color,
+            derive(-fx-color, 80%) 60%,
+            white 70%
+    );
+    -fx-selection-bar: linear-gradient(
+            to bottom,
+            derive(-fx-background, -7%) 0%,
+            derive(-fx-background, -34%) 100%
+    );
+    -fx-selection-bar-text: ladder(
+            -fx-background,
+            -fx-light-text-color 50%,
+            -fx-mid-text-color 51%
+    );
+    -fx-tab-border-color: -fx-box-border;
+    -fx-background-color: inherit;
+    -fx-background-radius: inherit;
+    -fx-background-insets: inherit;
+    -fx-padding: inherit;
+    -fx-cell-hover-color: #cce3f4;
+    -fx-cell-focus-inner-border: #85b9de;
+    -fx-page-bullet-border: #acacac;
+    -fx-page-indicator-hover-border: #accee5;
+    -fx-table-cell-border-color: #bbbbbb;
+    -fx-font-family-table-column-header: "Century Gothic";
+    -fx-font-family-table-body: "Baskerville Old Face";
+    -fx-table-header-text-fill: RGB(0, 125, 124);
+}
+
+.pane {
+    -fx-background-color: RGB(245, 245, 245);
+}
+
+.label-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-font-family: "Consolas";
+    -fx-text-fill: #28a744;
+}
+
+.label-message {
+    -fx-font-style: italic;
+    -fx-font-size: 11px;
+    -fx-font-family: "Consolas";
+    -fx-text-fill: darkorange;
+}
+
+.label-finished {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-font-family: "Consolas";
+    -fx-text-fill: #28a744;
+}
+
+.placeholder {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-font-family: "Consolas";
+    -fx-text-fill: coral;
+}
+
+#mainPane {
+    -fx-background-color: white;
+    -fx-border-color: -fx-text-box-border;
+    -fx-border-radius: 5;
+    -fx-border-insets: 0, 1 0 0 0;
+}
+.jfx-spinner{
+    -fx-font-family: "Consolas";
+}
+
+.jfx-spinner:determinate .percentage{
+    -fx-fill: grey;
+    -fx-font-size: 10px;
+}
+
+.jfx-button:armed,
+.jfx-button:hover,
+.jfx-button:focused,
+.jfx-button {
+    -fx-padding: 0.5em 0.57em;
+    -fx-font-size: 14px;
+    -jfx-button-type: RAISED;
+    -fx-background-color: #28a744;
+    -fx-text-fill: WHITE;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(
+            from 0px .75em to .75em 0px,
+            repeat,
+            -fx-accent 0%,
+            -fx-accent 49%,
+            derive(-fx-accent, 30%) 50%,
+            derive(-fx-accent, 30%) 99%
+    );
+}
+
+.separator *.line {
+    -fx-border-style: dashed;
+    -fx-border-width: 1px;
+
+}
