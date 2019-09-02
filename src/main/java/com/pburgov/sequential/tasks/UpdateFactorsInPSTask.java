@@ -1,18 +1,15 @@
 package com.pburgov.sequential.tasks;
 
-
-import javafx.concurrent.Task;
-
-public class UpdateFactorsInPSTask extends Task<String>  {
+public class UpdateFactorsInPSTask extends AbstractCustomTask<String>  {
 
     private int listSize;
     private static final String TASK_TITLE = "UPDATING CONVERSION FACTORS";
-    private static final String TASK_SUCCESS_TEXT = "Successfully updated!!!";
     private static final String TASK_MESSAGE = "Updating %1$04d conversion factors";
 
     public UpdateFactorsInPSTask(int listSize) {
+        super(TASK_TITLE);
         this.listSize = listSize;
-        this.updateTitle(TASK_TITLE);
+
     }
 
     @Override
@@ -33,20 +30,6 @@ public class UpdateFactorsInPSTask extends Task<String>  {
         return null;
     }
 
-    @Override
-    protected void updateMessage(String message) {
-        super.updateMessage(message);
-    }
 
-    @Override
-    protected void succeeded() {
-        super.succeeded();
-        updateValue(TASK_SUCCESS_TEXT);
-    }
-
-    @Override
-    protected void updateProgress(long workDone, long max) {
-        super.updateProgress(workDone, max);
-    }
 
 }

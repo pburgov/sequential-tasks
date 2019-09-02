@@ -1,17 +1,14 @@
 package com.pburgov.sequential.tasks;
 
-import javafx.concurrent.Task;
-
-public class UpdatePreciosInSAPTask extends Task<String>  {
+public class UpdatePreciosInSAPTask extends AbstractCustomTask<String>  {
 
     private int listSize;
     private static final String TASK_TITLE = "UPDATING ITEM PRICES IN ERP";
-    private static final String TASK_SUCCESS_TEXT = "Successfully updated!!!";
     private static final String TASK_MESSAGE = "Updating the price for the Item Nº: A-%1$05d";
 
     public UpdatePreciosInSAPTask(int listSize) {
+        super(TASK_TITLE);
         this.listSize = listSize;
-        this.updateTitle(TASK_TITLE);
     }
 
     @Override
@@ -30,20 +27,5 @@ public class UpdatePreciosInSAPTask extends Task<String>  {
         return null;
     }
 
-    @Override
-    public void updateMessage(String message) {
-        super.updateMessage(message);
-    }
-
-    @Override
-    protected void succeeded() {
-        super.succeeded();
-        updateValue(TASK_SUCCESS_TEXT);
-    }
-
-    @Override
-    protected void updateProgress(long workDone, long max) {
-        super.updateProgress(workDone, max);
-    }
 
 }

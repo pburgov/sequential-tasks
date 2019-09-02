@@ -1,17 +1,14 @@
 package com.pburgov.sequential.tasks;
 
-import javafx.concurrent.Task;
-
-public class DeletePreciosInSAPTask extends Task<String> {
+public class DeletePreciosInSAPTask extends AbstractCustomTask<String> {
 
     private int listSize;
     private static final String TASK_TITLE = "DELETING PRICES IN ERP";
-    private static final String TASK_SUCCESS_TEXT = "Successfully deleted!!!";
     private static final String TASK_MESSAGE = "Deleting the price for the Item Nº: A-%1$05d";
 
     public DeletePreciosInSAPTask(int listSize) {
+        super(TASK_TITLE);
         this.listSize = listSize;
-        this.updateTitle(TASK_TITLE);
     }
 
     @Override
@@ -21,29 +18,17 @@ public class DeletePreciosInSAPTask extends Task<String> {
                 Thread.sleep(100);
                 updateProgress(i, listSize);
                 String message = String.format(TASK_MESSAGE, i);
+                if(i==25){
+                    throw  new RuntimeException("Custom Exception");
+                }
                 updateMessage(message);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
+            this.setMessageError(ex.getMessage());
             this.cancel(true);
         }
         return null;
-    }
-
-    @Override
-    protected void updateMessage(String message) {
-        super.updateMessage(message);
-    }
-
-    @Override
-    protected void succeeded() {
-        super.succeeded();
-        updateValue(TASK_SUCCESS_TEXT);
-    }
-
-    @Override
-    protected void updateProgress(long workDone, long max) {
-        super.updateProgress(workDone, max);
     }
 
 }
