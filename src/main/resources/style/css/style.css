@@ -165,12 +165,13 @@
     -fx-text-fill: coral;
 }
 
-#mainPane {
+#mainPane, #dialogPane {
     -fx-background-color: white;
     -fx-border-color: -fx-text-box-border;
     -fx-border-radius: 5;
     -fx-border-insets: 0, 1 0 0 0;
 }
+
 .jfx-spinner{
     -fx-font-family: "Consolas";
 }
@@ -206,4 +207,33 @@
     -fx-border-style: dashed;
     -fx-border-width: 1px;
 
+}
+
+#dialogPane  {
+    -fx-background-color: white;
+    -fx-border-color: -fx-text-box-border;
+    -fx-border-radius: 5;
+    -fx-border-insets: 0, 1 0 0 0;
+}
+
+#errorMessage{
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-font-family: "Consolas";
+    -fx-text-fill: #28a744;
+    -fx-background-color: #fff, #fff;
+}
+
+#errorMessage .content {
+    -fx-background-color: #fff;
+}
+
+#errorMessage-area:focused .content {
+    -fx-background-color: #fff;
+}
+
+#errorStackTrace{
+    -fx-font-size: 10px;
+    -fx-font-family: "Consolas";
+    -fx-text-fill: grey;
 }

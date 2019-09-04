@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane id="rootPane" fx:id="rootPane" minHeight="350.0" minWidth="580.0" stylesheets="@../style/css/modena.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <StackPane id="dialogPane" fx:id="dialogPane" stylesheets="@../style/css/style.css" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <children>
+            <VBox id="vbox" fx:id="vbox" spacing="10" stylesheets="@../style/css/style.css">
+                <children>
+                    <TextArea id="errorMessage" fx:id="errorMessage" prefHeight="60.0" wrapText="true" stylesheets="@../style/css/style.css"/>
+                    <TextArea id="errorStackTrace" fx:id="errorStackTrace" wrapText="true" stylesheets="@../style/css/style.css"/>
+                </children>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+            </VBox>
+        </children>
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        </padding>
+    </StackPane>
+    <JFXButton id="bttClose" fx:id="bttClose" minHeight="35.0" minWidth="120.0" prefHeight="35.0" prefWidth="120.0" styleClass="jfx-button" stylesheets="@../style/css/style.css" text="Close" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0"/>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+</AnchorPane>

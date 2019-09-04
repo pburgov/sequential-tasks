@@ -7,7 +7,7 @@ public abstract class AbstractCustomTask <V> extends Task <String> {
     protected static final String TASK_SUCCESS_TEXT = "Success!!";
     protected static final String TASK_CANCELLED_TEXT = "Cancelled!!";
     protected Boolean hasLink;
-
+    protected Throwable throwable;
 
     public AbstractCustomTask( String title ) {
         this.updateTitle(title);
@@ -32,8 +32,8 @@ public abstract class AbstractCustomTask <V> extends Task <String> {
     protected void cancelled() {
         super.cancelled();
         updateValue(TASK_CANCELLED_TEXT);
-    }
 
+    }
 
     @Override
     protected void updateProgress( long workDone, long max ) {
@@ -48,7 +48,11 @@ public abstract class AbstractCustomTask <V> extends Task <String> {
         this.hasLink = hasLink;
     }
 
+    public Throwable getThrowable() {
+        return throwable;
+    }
 
-
-
+    public void setThrowable( Throwable throwable ) {
+        this.throwable = throwable;
+    }
 }

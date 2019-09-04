@@ -3,10 +3,12 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <AnchorPane id="rootPane" fx:id="rootPane" minHeight="590.0" minWidth="630.0" prefHeight="590.0" prefWidth="630.0"
             stylesheets="@../style/css/modena.css" xmlns="http://javafx.com/javafx/8.0.171"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pburgov.sequential.SequentialController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pburgov.sequential.controllers.SequentialController">
     <children>
         <Pane id="mainPane" fx:id="mainPane" layoutX="21.0" layoutY="21.0" minHeight="530.0" minWidth="620.0"
               prefHeight="530.0" prefWidth="620.0" stylesheets="@../style/css/style.css" AnchorPane.bottomAnchor="50.0"
