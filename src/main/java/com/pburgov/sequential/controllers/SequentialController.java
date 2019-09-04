@@ -93,7 +93,7 @@ public class SequentialController implements Initializable {
     }
 
     private void setUpTasks() {
-        int listSize = 20;
+        int listSize = 100;
 
         DeletePreciosInSAPTask deletePreciosInSAPTask = new DeletePreciosInSAPTask(listSize);
         UpdatePreciosInSAPTask updatePreciosInSAPTask = new UpdatePreciosInSAPTask(listSize);

@@ -18,16 +18,16 @@ public class DeletePreciosInSAPTask extends AbstractCustomTask <String> {
                 Thread.sleep(100);
                 updateProgress(i, listSize);
                 String message = String.format(TASK_MESSAGE, i);
-                if ( i == 10 ) {
-                    throw new RuntimeException("Custom Exception: " + getClass().getSimpleName());
+                if ( i == 25 ) {
+                    throw new RuntimeException("Custom Exception: " + getClass().getSimpleName() +
+                                                   "\nIn order to show how it works");
                 }
                 updateMessage(message);
             }
         } catch ( Exception ex ) {
+            this.setThrowable(ex);
             this.cancel(true);
             ex.printStackTrace();
-            this.setThrowable(ex);
-
         }
         return null;
     }

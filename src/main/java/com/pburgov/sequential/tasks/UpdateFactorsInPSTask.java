@@ -16,9 +16,8 @@ public class UpdateFactorsInPSTask extends AbstractCustomTask<String>  {
     protected String call() throws Exception {
         try {
             for (int i = 0; i <= listSize; i++) {
-
                 if (i % 20 == 0) {
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                     updateProgress(i, listSize - 1);
                     updateMessage(String.format(TASK_MESSAGE, i));
                 }

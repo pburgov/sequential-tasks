@@ -15,16 +15,16 @@ public class UpdateWebNamesInFNSAPTask extends AbstractCustomTask<String> {
     protected String call() throws Exception {
         try {
             for ( int i = 0; i <= listSize; i++ ) {
-                Thread.sleep(150);
+                Thread.sleep(100);
                 updateProgress(i, listSize);
                 String message = String.format(TASK_MESSAGE, i);
-                if(i==10){
-                    throw  new RuntimeException("Custom Exception: " + getClass().getSimpleName());
+                if(i==65){
+                    throw new RuntimeException("Custom Exception: " + getClass().getSimpleName() +
+                                                   "\nIn order to show how it works");
                 }
                 updateMessage(message);
             }
         } catch ( Exception ex ) {
-            ex.printStackTrace();
             this.setThrowable(ex);
             this.cancel(true);
         }

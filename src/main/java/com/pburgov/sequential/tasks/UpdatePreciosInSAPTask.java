@@ -15,7 +15,7 @@ public class UpdatePreciosInSAPTask extends AbstractCustomTask<String>  {
     protected String call() throws Exception {
         try {
             for (int i = 0; i <= listSize; i++) {
-                Thread.sleep(125);
+                Thread.sleep(100);
                 updateProgress(i, listSize);
                 String message = String.format(TASK_MESSAGE, i);
                 updateMessage(message);
